@@ -24,9 +24,7 @@ config['ws']['uri'] = ws_uri;
 //         onerror : errorCallback
 //       },
 //       rpc : {
-//         requestTimeout : 15000,
-//         // treeStopped : treeStopped,
-//         // iceCandidate : remoteOnIceCandidate,
+//         requestTimeout : 15000
 //         // sessionStatusChanged : sessionStatusChanged
 //       }
 //     };

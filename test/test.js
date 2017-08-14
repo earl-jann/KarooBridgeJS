@@ -3,7 +3,7 @@ var KarooBridge = require('..');
 var async = require('async');
 var ws_uri = 'ws://localhost:8070';
 var debug = require('debug')('karoobridgejs::test');
-var config = KarooBridge.Configuration();
+var config = new KarooBridge.Configuration();
 // we replace with our configuration
 config.identifier = 'earl';
 config.namespace = 'namespace';
@@ -24,9 +24,7 @@ config['ws']['uri'] = ws_uri;
 //         onerror : errorCallback
 //       },
 //       rpc : {
-//         requestTimeout : 15000,
-//         // treeStopped : treeStopped,
-//         // iceCandidate : remoteOnIceCandidate,
+//         requestTimeout : 15000
 //         // sessionStatusChanged : sessionStatusChanged
 //       }
 //     };
@@ -61,5 +59,5 @@ config['ws']['uri'] = ws_uri;
    ]);
   }
 
-  var client = KarooBridge.Client(config);
+  var client = new KarooBridge.Client(config);
   client.connect();
